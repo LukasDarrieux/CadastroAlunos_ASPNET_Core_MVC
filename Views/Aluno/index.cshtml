@@ -1,0 +1,54 @@
+@model List<Aluno>
+@{
+    ViewData["Title"] = "Cadastro de Alunos";
+}
+
+<div class="container">
+
+    <h1>@ViewData["Title"]</h1>
+
+    <a class="btn btn-success my-2" asp-controller="Aluno" asp-action="Create">
+        <span>Cadastrar</span>
+    </a>
+
+    <div class="card shadow mt-1">
+        <div class="container">
+            <table class="table table-responsive table-striped">
+                <thead>
+                
+                    <th class="col-md-1">Código</th>
+                    <th class="col-md">Nome</th>
+                    <th class="col-md-3">&nbsp;</th>
+                
+                </thead>
+                <tbody>
+
+                    @foreach(var aluno in Model)
+                    {
+                        <tr>
+                            <td>@aluno.Id</td>
+                            <td>@aluno.Nome</td>
+                            <td>
+                                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@aluno.Id">
+                                    <span class="text-light">Editar</span>
+                                </a>
+
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@aluno.Id">
+                                    <span>Deletar</span>
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+
+                    
+
+                    
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+
+</div>

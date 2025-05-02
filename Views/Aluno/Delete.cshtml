@@ -1,0 +1,53 @@
+﻿@model Aluno
+@{
+    ViewData["Title"] = "Excluir Aluno";
+}
+
+<div class="container">
+
+    <h1 class="text-center">@ViewData["Title"]</h1>
+
+    <div class="card shadow">
+        
+        <form method="POST" asp-action="Delete">
+            <div class="container p-3">
+
+                <input type="hidden" asp-for="Id" value="@Model.Id">
+
+                <div class="form-group my-1">
+                    <label>Nome</label>
+                    <input class="form-control" disabled type="text" asp-for="Nome" value="@Model.Nome">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Nome Mãe</label>
+                    <input class="form-control" disabled type="text" asp-for="NomeMae" value="@Model.NomeMae">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Nome Pai</label>
+                    <input class="form-control" disabled type="text" asp-for="NomePai" value="@Model.NomePai">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Data de nascimento</label>
+                    <input class="form-control" disabled type="date" asp-for="DataNascimento" value="@Model.DataNascimento">
+                </div>
+
+                <div class="form-group mt-3">
+                    <button class="btn btn-danger" type="submit">
+                        <span>Excluir</span>
+                    </button>
+
+                    <a class="btn btn-warning" asp-controller="Aluno" asp-action="Index">
+                        <span>Cancelar</span>
+                    </a>
+                </div>
+
+            </div>
+            
+        </form>
+        
+    </div>
+
+</div>

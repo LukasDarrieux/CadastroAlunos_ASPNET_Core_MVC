@@ -1,0 +1,47 @@
+﻿@model Aluno
+@{
+    ViewData["Title"] = "Cadastrar Aluno";
+}
+
+<div class="container">
+
+    <h1 class="text-center">@ViewData["Title"]</h1>
+
+    <div class="card shadow">
+        
+        <form method="POST" asp-action="Create">
+            <div class="container p-3">
+
+                <div class="form-group my-1">
+                    <label>Nome</label>
+                    <input class="form-control" type="text" asp-for="Nome">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Nome Mãe</label>
+                    <input class="form-control" type="text" asp-for="NomeMae">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Nome Pai</label>
+                    <input class="form-control" type="text" asp-for="NomePai">
+                </div>
+
+                <div class="form-group my-1">
+                    <label>Data de nascimento</label>
+                    <input class="form-control" type="date" asp-for="DataNascimento">
+                </div>
+
+                <div class="form-group mt-3">
+                    <button class="btn btn-success" type="submit">
+                        <span>Cadastrar</span>
+                    </button>
+                </div>
+
+            </div>
+            
+        </form>
+        
+    </div>
+
+</div>
