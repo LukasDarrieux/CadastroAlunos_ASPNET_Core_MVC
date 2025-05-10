@@ -19,7 +19,9 @@ Este projeto é uma aplicação simples de **cadastro de alunos** (CRUD) desenvo
 
 ## 🎯 Objetivo do Projeto
 
-O principal objetivo deste projeto foi **praticar o desenvolvimento com .NET Core no sistema operacional Linux (Ubuntu)**, utilizando ferramentas livres como o Visual Studio Code. Além disso, o projeto visa reforçar os conceitos básicos de um sistema CRUD completo, com operações de:
+O principal objetivo deste projeto foi **praticar o desenvolvimento com .NET Core no sistema operacional Linux (Ubuntu)**, utilizando ferramentas livres como o Visual Studio Code. 
+
+Além disso, o projeto visa reforçar os conceitos básicos de um sistema CRUD completo, com operações de:
 
 - ✅ Criação de novos alunos  
 - 📋 Listagem de alunos cadastrados  
